@@ -4,6 +4,6 @@ By: Suchy Fried & Levi Perelmuter
 
 This program will allow users to generate reminders for various halachic times throughout the day.
 
-Reminders will be in the form of text messages. 
+Reminders will be in the form of text messages and/or email. 
 
-The project will use publically available libraries to implement the zmanim calculator and generate text messages. 
+The project will implement publically available libraries to implement the zmanim calculator and generate text messages. 
