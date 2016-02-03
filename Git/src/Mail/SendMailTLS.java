@@ -1,7 +1,7 @@
 package Mail;
 
-
-import java.util.Properties;
+import java.util.*;
+//import java.util.Properties;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -18,7 +18,9 @@ public class SendMailTLS {
 		StringBuilder sb = new StringBuilder(mailList.match());
 		String subs = sb.toString();
 		final String username = "zmanimproject@gmail.com";
-		final String password = "zmanim2016";
+		System.out.println("Enter password:");
+		Scanner input = new Scanner(System.in);
+		final String password = input.next();
 
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
