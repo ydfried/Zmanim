@@ -21,7 +21,7 @@ public class SendMailTLS {
 		System.out.println("Enter password:");
 		Scanner input = new Scanner(System.in);
 		final String password = input.next();
-
+		input.close();
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
