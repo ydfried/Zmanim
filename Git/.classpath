@@ -3,5 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/java_ee_sdk-7u2/glassfish4/glassfish/lib/javaee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanim-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanimAstronomical-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanimoutput-1.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
