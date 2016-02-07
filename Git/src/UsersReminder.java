@@ -49,6 +49,8 @@ public class UsersReminder {
 		plagTime = this.calendar.getPlagHamincha();
 		sunsetTime = this.calendar.getSunset();
 		
+		this.timers();
+		
 	}
 	
 
