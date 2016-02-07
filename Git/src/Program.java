@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.Timer;
 
 import net.sourceforge.zmanim.ComplexZmanimCalendar;
 import net.sourceforge.zmanim.util.GeoLocation;
@@ -23,12 +24,6 @@ public class Program {
 		
 		UsersReminder LeviPerelmuter = new UsersReminder("Brooklyn, NY", 40.6639, -73.9399,TimeZone.getTimeZone(timeZone),true, true, true, true, true, true);
 		
-		while (true){
-			Date now = new Date();
-			if (now == LeviPerelmuter.times.get("alos")){
-				System.out.println("It's time for alos!");
-			}
-		}
 		
 		
 		

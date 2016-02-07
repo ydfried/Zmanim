@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 import java.util.TimeZone;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import net.sourceforge.zmanim.ComplexZmanimCalendar;
 import net.sourceforge.zmanim.util.GeoLocation;
@@ -21,8 +23,12 @@ public class UsersReminder {
 	
 	public ComplexZmanimCalendar calendar;
 	
-	//ArrayList<Date> times = new ArrayList<Date>();
-	Map<String,Date> times;
+	Date alosTime;
+	Date sunriseTime;
+	Date sofZmanShmaTime;
+	Date sofZmanTfilaTime;
+	Date plagTime;
+	Date sunsetTime;
 
 
 	public UsersReminder (String location, double lat, double lon, TimeZone timezone, boolean a, boolean su, boolean shma, boolean tfila, boolean p, boolean sun){
@@ -36,21 +42,37 @@ public class UsersReminder {
 		plag = p;
 		sunset = sun;
 		
+		alosTime = this.calendar.getAlosHashachar();
+		sunriseTime = this.calendar.getSunrise();
+		sofZmanShmaTime = this.calendar.getSofZmanShmaGRA();
+		sofZmanTfilaTime = this.calendar.getSofZmanTfilaGRA();
+		plagTime = this.calendar.getPlagHamincha();
+		sunsetTime = this.calendar.getSunset();
+		
 	}
 	
-	public void getTimes(){
-		if (alos)
-			times.put("alos",(this.calendar.getAlosHashachar()));
-		if (sunrise)
-			times.put("sunrise",(this.calendar.getSunrise()));
-		if (sofZmanShma)
-			times.put("Sof ZMan Krias Shma",(this.calendar.getSofZmanShmaGRA()));
-		if (sofZmanTfila)
-			times.put("Sof ZMan Tfila",(this.calendar.getSofZmanTfilaGRA()));
-		if (plag)
-			times.put("Plag Hamincha",(this.calendar.getPlagHamincha()));
-		if (sunset)
-			times.put("sunset",(this.calendar.getSunset()));
-	}
 
+	private static class MyTimeTask extends TimerTask
+	{
+
+	    public void run()
+	    {
+	        System.out.println("its time!");
+	    }
+	}
+	
+	public void timers(){
+	Timer timer = new Timer();
+
+    timer.schedule(new MyTimeTask(), this.alosTime);
+    timer.schedule(new MyTimeTask(), this.sunriseTime);
+    timer.schedule(new MyTimeTask(), this.sofZmanShmaTime);
+    timer.schedule(new MyTimeTask(), this.sofZmanTfilaTime);
+    timer.schedule(new MyTimeTask(), this.plagTime);
+    timer.schedule(new MyTimeTask(), this.sunsetTime);
+    timer.schedule(new MyTimeTask(), alosTime);
+    
+
+	}
+	
 }
