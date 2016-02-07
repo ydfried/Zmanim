@@ -54,24 +54,28 @@ public class UsersReminder {
 
 	private static class MyTimeTask extends TimerTask
 	{
+		
+		public String message; 
+		
+		MyTimeTask(String message){
+			this.message = message;
+		}
 
 	    public void run()
 	    {
-	        System.out.println("its time!");
+	        System.out.println(this.message);
 	    }
 	}
 	
 	public void timers(){
 	Timer timer = new Timer();
 
-    timer.schedule(new MyTimeTask(), this.alosTime);
-    timer.schedule(new MyTimeTask(), this.sunriseTime);
-    timer.schedule(new MyTimeTask(), this.sofZmanShmaTime);
-    timer.schedule(new MyTimeTask(), this.sofZmanTfilaTime);
-    timer.schedule(new MyTimeTask(), this.plagTime);
-    timer.schedule(new MyTimeTask(), this.sunsetTime);
-    timer.schedule(new MyTimeTask(), alosTime);
-    
+    timer.schedule(new MyTimeTask("Alos now!"), this.alosTime);
+    timer.schedule(new MyTimeTask("sunrise now!"), this.sunriseTime);
+    timer.schedule(new MyTimeTask("sof Zman Sham now!"), this.sofZmanShmaTime);
+    timer.schedule(new MyTimeTask("sof Zman tfila now!"), this.sofZmanTfilaTime);
+    timer.schedule(new MyTimeTask("plag hamincha now!"), this.plagTime);
+    timer.schedule(new MyTimeTask("sunset now!"), this.sunsetTime);    
 
 	}
 	
