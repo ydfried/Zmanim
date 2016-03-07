@@ -6,7 +6,7 @@ import java.io.*;
 
 import javax.lang.model.element.Element;
 
-import org.jdom2.input.SAXBuilder;
+//import org.jdom2.input.SAXBuilder;
      
     public class SMS {
      
@@ -29,7 +29,7 @@ import org.jdom2.input.SAXBuilder;
             boolean isSuccesResponse = responseCode < 400;
      
             InputStream responseStream = isSuccesResponse ? conn.getInputStream() : conn.getErrorStream();
-     
+     /**
             //Use JDOM (http://www.jdom.org) for xml response handling
     	org.jdom2.Element response = new SAXBuilder().build(responseStream).getRootElement(); 
     	System.out.println("Status: " + response.getChildText("Status"));
@@ -70,5 +70,5 @@ import org.jdom2.input.SAXBuilder;
      
             return buf.toString();
         }
-     
-    }
+     **/
+    }}
