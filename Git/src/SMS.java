@@ -10,7 +10,7 @@ import org.jdom2.input.SAXBuilder;
      
     public class SMS {
      
-        public static void test(String phonenumber, String message) throws Exception {
+        public static void text(String phonenumber, String message) throws Exception {
      
             String data = "User=perelmuter&Password=eztext4318&PhoneNumbers[]="+phonenumber+"&PhoneNumbers[]="+phonenumber+"&Subject=From Levi&Message="+message+"&StampToSend=1305582245&MessageTypeID=1";
      
