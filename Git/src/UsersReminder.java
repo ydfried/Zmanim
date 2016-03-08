@@ -53,21 +53,6 @@ public class UsersReminder {
 		
 	}
 	
-
-	private static class MyTimeTask extends TimerTask
-	{
-		
-		public String message; 
-		
-		MyTimeTask(String message){
-			this.message = message;
-		}
-
-	    public void run()
-	    {
-	        System.out.println(this.message);
-	    }
-	}
 	
 	public void timers(){
 	Timer timer = new Timer();
