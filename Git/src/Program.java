@@ -16,13 +16,25 @@ public class Program {
 //		cmp.setGeoLocation(testloc);
 //		System.out.println(testloc.toString());
 //		
+		
+		
 		try {
-			SMS.test("9175620150", "this is a Test");
+			DB myDb = new DB();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		
+		
+		
+		/*try {
+			SMS.test("9175620150", "this is a Test");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
 //		System.out.println(cmp.getSofZmanShmaMGA16Point1Degrees()); //dddcfds
 
 		//String timeZone = TimeZoneMapper.latLngToTimezoneString(40.6639, -73.9399);
