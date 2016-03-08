@@ -1,7 +1,5 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+
 
 public class DB {
 	
@@ -17,14 +15,14 @@ public class DB {
   }
   
   public static void db() throws Exception {
-    String driverName = "org.gjt.mm.mysql.Driver";
+    String driverName = "com.mysql.jdbc.Driver";
     Class.forName(driverName);
 
     String serverName = "localhost";
     String mydatabase = "zmanim";
     String url = "jdbc:mysql://" + serverName + "/" + mydatabase; 
 
-    String username = "Admin";
+    String username = "admin";
     String password = "sa";
     connection = DriverManager.getConnection(url, username, password);
   }
