@@ -1,28 +1,23 @@
 
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-
-
-//import Mail.SendReceiveMail;
 import net.sourceforge.zmanim.ComplexZmanimCalendar;
 import net.sourceforge.zmanim.util.GeoLocation;
 public class EmailMessage {
-	Date s;
-	String am = "am";
-	String pm = "pm";
-	String z = "Zmanim:";
+	
 	String alos, yakir, hanetz, shma1, shma2, tefila, chatzos, minchaG, plag, minchaK, shkia, tzeis1, tzeis2, tzeis3;
 	
 	String message;
 		
 		public EmailMessage(double lat, double longitude, TimeZone timeZone) {
-			ComplexZmanimCalendar cmp = new ComplexZmanimCalendar();
-			GeoLocation testloc = new GeoLocation("Brooklyn, NY", lat, longitude, timeZone);
-			cmp.setGeoLocation(testloc);
-			System.out.println(testloc.toString());
+			GeoLocation loc = new GeoLocation("Brooklyn, NY", lat, longitude, timeZone);
+			ComplexZmanimCalendar cmp = new ComplexZmanimCalendar(loc);
+			//cmp.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
+			
 			
 			Long shZ = cmp.getShaahZmanis16Point1Degrees();
 			
@@ -108,18 +103,8 @@ public class EmailMessage {
 			
 		}
 		
-		/**private String covert(Date zman) {
-			String nString = zman.toString().substring(11, 20);
-			if (nString.startsWith("11")) {
-				nString += "am";
-			}
-			else
-				nString += "pm";
-			return nString;
-		}
-**/
 		public String convert(Date zman) {
-			//String nString = zman.toString().substring(11, 20) + mn;
+
 			String nString = new SimpleDateFormat("hh:mm:ss a").format(zman);
 						
 			return nString;
