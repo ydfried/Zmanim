@@ -13,7 +13,8 @@ public class EmailMessageTest {
 
 	@Test
 	public void testGetS() {
-		EmailMessage m = new EmailMessage(40.6928, -73.9903, TimeZone.getDefault());
+		String timeZone = TimeZoneMapper.latLngToTimezoneString(40.6928, -73.9903);
+		EmailMessage m = new EmailMessage(40.6928, -73.9903, TimeZone.getTimeZone(timeZone));
 		System.out.println(m.getMessage());
 		assertTrue(m.getMessage() instanceof String);
 	}
