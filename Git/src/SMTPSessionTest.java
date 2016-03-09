@@ -1,4 +1,4 @@
-package Mail;
+
 
 import static org.junit.Assert.*;
 
