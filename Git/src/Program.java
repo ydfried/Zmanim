@@ -21,8 +21,11 @@ public class Program {
 //	        //execute every 3 seconds
 //	        timer.schedule(new DailyRun(), date.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
 		
-		DailyRun test = new DailyRun();
-		test.run();
+		System.out.println(TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
+		
+		
+//		DailyRun test = new DailyRun();
+//		test.run();
 		
 	}
 
