@@ -23,7 +23,7 @@ and open the template in the editor.
         
     </head>
  <body>
-    
+     <h4>Please enter your phone number as a 10 digit number without any spaces or symbols (e.g. -().)</h4>
  <form action="DB.php" method="post">
  <input type="hidden" id="lat" name="lat" value=""/>
  <input type="hidden" id="long" name="long" value=""/>
@@ -34,8 +34,11 @@ and open the template in the editor.
 <input type="checkbox" name="tfila" value="Tfila">Tfila<br>
 <input type="checkbox" name="plag" value="Plag">Plag<br>
 <input type="checkbox" name="sunset" value="Sunset">Sunset<br>
+Email: <input type="text" name="email"><br>
  <input type="submit">
  </form>
+     <br><br><br><br>
+     <a href="Unsub.php"> click here to cancel your reminders</a>
 
  </body>
  </html> 

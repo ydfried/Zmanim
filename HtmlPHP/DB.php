@@ -16,6 +16,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $lat = (string)$_POST["lat"];
 $long = (string)$_POST["long"];
 $phone = (string)$_POST["phone"];
+$email = (string)$_POST["email"];
 if (isset($_POST["alos"])){
     $alos = (string)isset($_POST["alos"]);
 }
@@ -55,13 +56,15 @@ else {
 
         
 
-$sql = "INSERT INTO reminders (lat, longt, phone, alos, sunrise, shma, tfila, plag, sunset) VALUES ('$lat', '$long', '$phone', '$alos', '$sunrise', '$shma', '$tfila', '$plag', '$sunset')";
+$sql = "INSERT INTO reminders (lat, longt, phone, alos, sunrise, shma, tfila, plag, sunset, email) VALUES ('$lat', '$long', '$phone', '$alos', '$sunrise', '$shma', '$tfila', '$plag', '$sunset', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+echo "<br><br><a href='index.php'>Click here to add another reminder</a>";
 
 $conn->close();
  ?> 
