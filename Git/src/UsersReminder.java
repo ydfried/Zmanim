@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 import java.util.TimeZone;
@@ -27,6 +28,11 @@ public class UsersReminder {
 		this.phoneNumber = phoneNumber;
 		this.location = new GeoLocation(location, lat, lon, timezone);
 		this.calendar = new ComplexZmanimCalendar(this.location);	
+		this.calendar.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
+		
+		System.out.println(this.calendar.getAlosHashachar());
+		System.out.println(this.calendar.getSunrise());
+		System.out.println(this.calendar.getSofZmanShmaGRA());
 		
 		if(a)
 			timer.schedule(new MyTimeTask("Alos now!", this.phoneNumber), this.calendar.getAlosHashachar());
