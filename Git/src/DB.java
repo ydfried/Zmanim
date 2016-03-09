@@ -22,8 +22,8 @@ public class DB {
     String mydatabase = "zmanim";
     String url = "jdbc:mysql://" + serverName + "/" + mydatabase; 
 
-    String username = "admin";
-    String password = "sa";
+    String username = "root";
+    String password = "";
     connection = DriverManager.getConnection(url, username, password);
   }
   

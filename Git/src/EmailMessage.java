@@ -16,7 +16,7 @@ public class EmailMessage {
 		public EmailMessage(double lat, double longitude, TimeZone timeZone) {
 			GeoLocation loc = new GeoLocation("Brooklyn, NY", lat, longitude, timeZone);
 			ComplexZmanimCalendar cmp = new ComplexZmanimCalendar(loc);
-			//cmp.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
+		
 			
 			
 			Long shZ = cmp.getShaahZmanis16Point1Degrees();

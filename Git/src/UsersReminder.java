@@ -24,11 +24,11 @@ public class UsersReminder {
 	
 
 
-	public UsersReminder (String phoneNumber, String location, double lat, double lon, TimeZone timezone, boolean a, boolean su, boolean shma, boolean tfila, boolean p, boolean sun){
+	public UsersReminder (String phoneNumber, String location, double lat, double lon, TimeZone timezone, boolean a, boolean y, boolean su, boolean shma1, boolean shma2, boolean tfila, boolean p, boolean sun){
 		this.phoneNumber = phoneNumber;
 		this.location = new GeoLocation(location, lat, lon, timezone);
 		this.calendar = new ComplexZmanimCalendar(this.location);	
-		this.calendar.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
+		//this.calendar.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
 		
 		System.out.println(this.calendar.getAlosHashachar());
 		System.out.println(this.calendar.getSunrise());
@@ -36,10 +36,14 @@ public class UsersReminder {
 		
 		if(a)
 			timer.schedule(new MyTimeTask("Alos now!", this.phoneNumber), this.calendar.getAlosHashachar());
+		if(y)
+			timer.schedule(new MyTimeTask("Mi'sh'yakir now!", this.phoneNumber), this.calendar.getMisheyakir10Point2Degrees());
 		if(su)
 			timer.schedule(new MyTimeTask("sunrise now!", this.phoneNumber), this.calendar.getSunrise());
-		if(shma)
-			timer.schedule(new MyTimeTask("sof Zman Sham now!", this.phoneNumber), this.calendar.getSofZmanShmaGRA());
+		if(shma1)
+			timer.schedule(new MyTimeTask("sof Zman Shma now!", this.phoneNumber), this.calendar.getSofZmanShmaMGA16Point1Degrees());
+		if(shma2)
+			timer.schedule(new MyTimeTask("sof Zman Shma now!", this.phoneNumber), this.calendar.getSofZmanShmaGRA());
 		if(tfila)
 			timer.schedule(new MyTimeTask("sof Zman tfila now!", this.phoneNumber), this.calendar.getSofZmanTfilaGRA());
 		if(p)

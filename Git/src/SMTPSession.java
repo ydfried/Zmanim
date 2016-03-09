@@ -16,19 +16,19 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class SMTPSession {
-	private String username;
+	private String username = "ydfried";
 	private String password;
 	private Session session;
 	
 	public SMTPSession() {
 		login();
-		/**System.out.println("Opening SMTP Session...\n\nEnter Username:");
-		Scanner input = new Scanner(System.in);
-		username = input.next() + "@gmail.com";
-		System.out.println("Enter password:");
-		input = new Scanner(System.in);
-		password = input.next();
-		input.close();**/
+		System.out.println("Opening SMTP Session...");
+		
+		username = username + "@gmail.com";
+		
+		
+		password = "zmanim2016";
+		
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
