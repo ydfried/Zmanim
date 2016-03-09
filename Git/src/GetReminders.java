@@ -6,7 +6,6 @@ public class GetReminders {
 	
 	public static void getReminders(DB myDb){
 		try {
-		myDb = new DB();
 		while(myDb.rs.next()){
 			float lat = myDb.rs.getFloat("lat");
 			float lon = myDb.rs.getFloat("longt");
