@@ -6,13 +6,13 @@ import java.io.*;
 
 import javax.lang.model.element.Element;
 
-//import org.jdom2.input.SAXBuilder;
+import org.jdom2.input.SAXBuilder;
      
     public class SMS {
      
-        public static void test(String phonenumber, String message) throws Exception {
+        public static void text(String phonenumber, String message) throws Exception {
      
-            String data = "User=perelmuter&Password=eztext4318&PhoneNumbers[]="+phonenumber+"&PhoneNumbers[]="+phonenumber+"&Subject=From Levi&Message="+message+"&StampToSend=1305582245&MessageTypeID=1";
+            String data = "User=perelmuter&Password=classtest&PhoneNumbers[]="+phonenumber+"&PhoneNumbers[]="+phonenumber+"&Subject=From Levi&Message="+message+"&StampToSend=1305582245&MessageTypeID=1";
      
             URL url = new URL("https://app.eztexting.com/sending/messages?format=xml");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -29,7 +29,7 @@ import javax.lang.model.element.Element;
             boolean isSuccesResponse = responseCode < 400;
      
             InputStream responseStream = isSuccesResponse ? conn.getInputStream() : conn.getErrorStream();
-     /**
+     
             //Use JDOM (http://www.jdom.org) for xml response handling
     	org.jdom2.Element response = new SAXBuilder().build(responseStream).getRootElement(); 
     	System.out.println("Status: " + response.getChildText("Status"));
@@ -70,5 +70,5 @@ import javax.lang.model.element.Element;
      
             return buf.toString();
         }
-     **/
-    }}
+     
+    }
