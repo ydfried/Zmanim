@@ -12,7 +12,7 @@ import org.jdom2.input.SAXBuilder;
      
         public static void text(String phonenumber, String message) throws Exception {
      
-            String data = "User=perelmuter&Password=eztext4318&PhoneNumbers[]="+phonenumber+"&PhoneNumbers[]="+phonenumber+"&Subject=From Levi&Message="+message+"&StampToSend=1305582245&MessageTypeID=1";
+            String data = "User=perelmuter&Password=**********&PhoneNumbers[]="+phonenumber+"&PhoneNumbers[]="+phonenumber+"&Subject=From Levi&Message="+message+"&StampToSend=1305582245&MessageTypeID=1";
      
             URL url = new URL("https://app.eztexting.com/sending/messages?format=xml");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();

@@ -26,4 +26,5 @@ public class DB {
     String password = "sa";
     connection = DriverManager.getConnection(url, username, password);
   }
+  
 }
