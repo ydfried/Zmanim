@@ -11,11 +11,8 @@ public class GetReminders {
 			
 			float lat = myDb.rs.getFloat("lat");
 			float lon = myDb.rs.getFloat("longt");
-			
 			String timeZone = TimeZoneMapper.latLngToTimezoneString(lat, lon);
-			
-			EmailMessage message = new EmailMessage(lat, lon, TimeZone.getTimeZone(timeZone));
-			new SendReceiveMail(myDb.rs.getString("email"), "Zmanim", message.getMessage());
+			new EmailMessage(myDb.rs.getString("email"), lat, lon, TimeZone.getTimeZone(timeZone));
 			new UsersReminder(myDb.rs.getString("phone"), "", lat, lon, 
 					TimeZone.getTimeZone(timeZone), 
 					myDb.rs.getBoolean("alos"), myDb.rs.getBoolean("yakir"), myDb.rs.getBoolean("sunrise"), 

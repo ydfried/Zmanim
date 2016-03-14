@@ -13,8 +13,7 @@ import net.sourceforge.zmanim.util.GeoLocation;
 public class Program {
 
 	public static void main(String[] args) {		
-		    
-		    
+			
 			Timer timer = new Timer();
 	        Calendar date = Calendar.getInstance();
 	        //Setting the date from when you want to activate scheduling
@@ -22,8 +21,8 @@ public class Program {
 	        //execute every 3 seconds
 	        timer.schedule(new DailyRun(), date.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
 	
-		//DailyRun test = new DailyRun();
-		//test.run();
+		DailyRun test = new DailyRun();
+		test.run();
 	
 	}
 

@@ -35,21 +35,21 @@ public class UsersReminder {
 		System.out.println(this.calendar.getSofZmanShmaGRA());
 		
 		if(a)
-			timer.schedule(new MyTimeTask("Alos now!", this.phoneNumber), this.calendar.getAlosHashachar());
+			timer.schedule(new MyTimeTask("Alos now! " + this.calendar.getAlosHashachar(), this.phoneNumber), this.calendar.getAlosHashachar());
 		if(y)
-			timer.schedule(new MyTimeTask("Mi'sh'yakir now!", this.phoneNumber), this.calendar.getMisheyakir10Point2Degrees());
+			timer.schedule(new MyTimeTask("Mi'sh'yakir now! " + this.calendar.getMisheyakir10Point2Degrees(), this.phoneNumber), this.calendar.getMisheyakir10Point2Degrees());
 		if(su)
-			timer.schedule(new MyTimeTask("sunrise now!", this.phoneNumber), this.calendar.getSunrise());
+			timer.schedule(new MyTimeTask("sunrise now! " + this.calendar.getSunrise(), this.phoneNumber), this.calendar.getSunrise());
 		if(shma1)
-			timer.schedule(new MyTimeTask("sof Zman Shma now!", this.phoneNumber), this.calendar.getSofZmanShmaMGA16Point1Degrees());
+			timer.schedule(new MyTimeTask("sof Zman Shma now! "  + this.calendar.getSofZmanShmaMGA16Point1Degrees(), this.phoneNumber), this.calendar.getSofZmanShmaMGA16Point1Degrees();
 		if(shma2)
-			timer.schedule(new MyTimeTask("sof Zman Shma now!", this.phoneNumber), this.calendar.getSofZmanShmaGRA());
+			timer.schedule(new MyTimeTask("sof Zman Shma now! " + this.calendar.getSofZmanShmaGRA(), this.phoneNumber), this.calendar.getSofZmanShmaGRA());
 		if(tfila)
-			timer.schedule(new MyTimeTask("sof Zman tfila now!", this.phoneNumber), this.calendar.getSofZmanTfilaGRA());
+			timer.schedule(new MyTimeTask("sof Zman tfila now! " + this.calendar.getSofZmanTfilaGRA(), this.phoneNumber), this.calendar.getSofZmanTfilaGRA());
 		if(p)
-			timer.schedule(new MyTimeTask("plag hamincha now!", this.phoneNumber), this.calendar.getPlagHamincha());
+			timer.schedule(new MyTimeTask("plag hamincha now! " + this.calendar.getPlagHamincha(), this.phoneNumber), this.calendar.getPlagHamincha());
 		if(sun)
-			timer.schedule(new MyTimeTask("sunset now!", this.phoneNumber), this.calendar.getSunset());    
+			timer.schedule(new MyTimeTask("sunset now! " + this.calendar.getSunset(), this.phoneNumber), this.calendar.getSunset());    
 
 	}
 	

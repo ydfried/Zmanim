@@ -7,20 +7,14 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class SendReceiveMail {
-	private String username;
-
 	
-	
-	private SMTPSession email = new SMTPSession();
-	private Message message = new MimeMessage(email.getSession());
-	
-	
-	public SendReceiveMail(String emailTo, String subject, String messageBody) {
-
+	public SendReceiveMail(String emailTo, String subject, String messageBody/*, SMTPSession session*/) {
+		SMTPSession session = new SMTPSession();
+		Message message = new MimeMessage(session.getSession());
 		try {
 
 			
-			message.setFrom(new InternetAddress(username + "@gmail.com"));
+			message.setFrom(new InternetAddress(session.getUsername()));
 			message.setRecipients(Message.RecipientType.BCC,
 					InternetAddress.parse(emailTo));
 			message.setSubject(subject);
@@ -30,7 +24,7 @@ public class SendReceiveMail {
 			Transport.send(message);
 
 			System.out.println("Done");
-
+			
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
 		}

@@ -16,12 +16,12 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class SMTPSession {
-	private String username = "ydfried";
+	private String username = "zmanimproject";
 	private String password;
 	private Session session;
 	
 	public SMTPSession() {
-		login();
+		
 		System.out.println("Opening SMTP Session...");
 		
 		username = username + "@gmail.com";
@@ -41,6 +41,7 @@ public class SMTPSession {
 				return new PasswordAuthentication(username, password);
 			}
 		  });
+		
 	}
 	public void login() {
 		 final JFrame frame = new JFrame("Gmail Login");
