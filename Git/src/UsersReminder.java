@@ -41,7 +41,7 @@ public class UsersReminder {
 		if(su)
 			timer.schedule(new MyTimeTask("sunrise now! " + this.calendar.getSunrise(), this.phoneNumber), this.calendar.getSunrise());
 		if(shma1)
-			timer.schedule(new MyTimeTask("sof Zman Shma now! "  + this.calendar.getSofZmanShmaMGA16Point1Degrees(), this.phoneNumber), this.calendar.getSofZmanShmaMGA16Point1Degrees();
+			timer.schedule(new MyTimeTask("sof Zman Shma now! "  + this.calendar.getSofZmanShmaMGA16Point1Degrees(), this.phoneNumber), this.calendar.getSofZmanShmaMGA16Point1Degrees());
 		if(shma2)
 			timer.schedule(new MyTimeTask("sof Zman Shma now! " + this.calendar.getSofZmanShmaGRA(), this.phoneNumber), this.calendar.getSofZmanShmaGRA());
 		if(tfila)
