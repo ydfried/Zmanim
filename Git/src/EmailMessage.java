@@ -13,11 +13,10 @@ public class EmailMessage {
 	
 	String message;
 		
-		public EmailMessage(double lat, double longitude, TimeZone timeZone) {
+		public EmailMessage(String emailTo, double lat, double longitude, TimeZone timeZone) {
 			GeoLocation loc = new GeoLocation("Brooklyn, NY", lat, longitude, timeZone);
 			ComplexZmanimCalendar cmp = new ComplexZmanimCalendar(loc);
-			//cmp.getCalendar().roll(Calendar.DAY_OF_YEAR, 1);
-			
+		
 			
 			Long shZ = cmp.getShaahZmanis16Point1Degrees();
 			
@@ -37,12 +36,18 @@ public class EmailMessage {
 			tzeis3 = convert(cmp.getTzais72());
 			
 			
-			message = "<div id=\":ar\" class=\"Am Al editable LW-avf\" hidefocus=\"true\" aria-label=\"Message Body\" g_editable=\"true\" role=\"textbox\" contenteditable=\"true\" tabindex=\"1\" style=\"direction: ltr; min-height: 80px;\"><table border =\"0\" width=\"100%\">"
+			message = "<div id=\":ar\" class=\"Am Al editable LW-avf\" hidefocus=\"true\" aria-label=\"Message Body\" g_editable=\"true\" role=\"textbox\" contenteditable=\"true\" tabindex=\"1\" style=\"direction: ltr; min-height: 80px;\"><table border =\"1\" width=\"100%\">"
 	   +"<caption>ZmanimProject</caption>"
+	   +"<thead>"
 	   +"<tr>"
 	     +"<th>Zman</th>"
 	     +"<th>Time</th>"
 	   +"</tr>"
+	   +"</thead>"
+	   +"<tfoot>"
+	   +"<tr>"
+	     +"<td colspan=\"2\">B'zechus Refuah Sh'leima L'Asher Zeilig ben Chana Malka</td>"
+	   +"<tbody>"
 	   +"<tr>"
 	     +"<td>Alos</td>"
 	     +"<td>"+alos+"</td>"
@@ -99,11 +104,13 @@ public class EmailMessage {
 	     +"<td>Tzeis R\"T</td>"
 	     +"<td>"+tzeis3+"</td>"
 	   +"</tr>"
+	   +"</tbody>"
 	   +"</table></div>";
-			
+			System.out.println(message);
+			new SendReceiveMail(emailTo, "zmanim", message);
 		}
 		
-		public String convert(Date zman) {
+		public static String convert(Date zman) {
 
 			String nString = new SimpleDateFormat("hh:mm:ss a").format(zman);
 						

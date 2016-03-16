@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="ReferenceJars/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/ReferenceJars"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/java_ee_sdk-7u2/glassfish4/glassfish/lib/javaee.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanim-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanimAstronomical-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/zmanim-1.3.0/lib/zmanimoutput-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/jdom-2.0.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Suchy/Downloads/jdom-2.0.6-contrib.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/zmanimAstronomical-1.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/hamcrest-junit-2.0.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/jdom-2.0.6.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/jdom-2.0.6-contrib.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/jsoup-1.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/zmanim-1.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/zmanimstuff/zmanimoutput-1.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/javax.mail.jar"/>
+	<classpathentry kind="lib" path="/home/m/Downloads/mysql-connector-java-5.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
